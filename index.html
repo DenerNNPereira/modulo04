@@ -43,33 +43,99 @@
     <h1>teste de iframe</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ex rem, optio perferendis tempore quisquam iure odit quas, saepe iusto recusandae architecto tenetur sunt vel libero voluptatem cupiditate tempora quasi.</p>
     <iframe id="i1a3c22m4" src="pag001.html" frameborder="0" height="500" width="500">
-        se não compatível clique <a href="pag001.html" target="_blank">aqui</a> para acessar
+        se não compatível clique <a href="extras/pag001.html" target="_blank">aqui</a> para acessar
     </iframe>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quasi doloribus doloremque magnam dicta, itaque, deserunt ducimus amet tempora excepturi eligendi quibusdam rerum modi. Qui inventore a consectetur deserunt iste!</p>
 
     <hr><br>
     <h1>navegação no iframe. aula 04 capítulo 22 módulo 04</h1>
-    <p></p>
+    <p>o parâmetro src serve para indicar qual o endereço do arquivo ou link que se pretende usar no iframe, caso esses arquivos estejam em alguma pasta ou conjunto de pastas, deve ser adicionar o nome das pastas indicando o caminho e separando por barra / tudo entre aspas duplas "" e com o mesmo nome exatamente como nos arquivos e pastas.</p>
+    <p>para que um link ou uma página carregue dentro de um iframe é necessário que o target do link seja definido com o nome do iframe, o iframe deve receber o parâmetro name nome, com o atributo de um nome, que será o mesmo no target do link</p>
+
+    <h1>navegação com iframe</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, iure recusandae, quidem id, provident nemo voluptatibus adipisci veritatis totam eos dolor labore alias delectus perferendis doloribus error libero fugit quas.</p>
+    <h1>faça uma escolha</h1>
+    <ul>
+        <li><a href="extras/pag001.html" target="framea4c22m04">página 01</a></li>
+        <li><a href="extras/pag002.html" target="framea4c22m04">página 02</a></li>
+        <li><a href="extras/pag003.html" target="framea4c22m04">página 03</a></li>
+    </ul>
+
+    <iframe src="" id="framea4c22m04" name="framea4c22m04"><p>se não compatível clique <a href="extras/pag001.html" target="_blank">aqui</a> para acessar</p></iframe>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam officiis accusantium laudantium labore vitae pariatur temporibus esse iure dolore excepturi provident adipisci similique autem necessitatibus, perferendis est? Expedita, odit cumque.</p>
+
 
     <hr><br>
-    <h1> aula 01 capítulo 22 módulo 04</h1>
-    <p></p>
+    <h1>conteúdo no iframe por código. aula 05 capítulo 22 módulo 04</h1>
+    <p>o parâmetro srcdoc pertie que seja escrito código html que irá funcionar dentro do iframe, como as tags h1 ou p, por exemplo. ao usar a tag img para adicionar imagens o scr da tag img deve estar entre aspas simples '' ou configurações que utilizem aspas em algum momento que forem adicionado dentro do scrdoc.ao invés do iframe navegável iniciar com o srcdoc ele pode iniciar com uma página inicial</p>
+
+    <h1>navegação com iframe</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, iure recusandae, quidem id, provident nemo voluptatibus adipisci veritatis totam eos dolor labore alias delectus perferendis doloribus error libero fugit quas.</p>
+    <h1>faça uma escolha</h1>
+    <ul>
+        <li><a href="extras/pag001.html" target="frame2a4c22m04">página 01</a></li>
+        <li><a href="extras/pag002.html" target="frame2a4c22m04">página 02</a></li>
+        <li><a href="extras/pag003.html" target="frame2a4c22m04">página 03</a></li>
+    </ul>
+
+    <iframe srcdoc="<h1>escolha um ítem acima</h1>
+        <p>vá alternando conforme desejar</p>" id="framea4c22m04" name="frame2a4c22m04"><p>se não compatível clique <a href="extras/pag001.html" target="_blank">aqui</a> para acessar</p></iframe>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam officiis accusantium laudantium labore vitae pariatur temporibus esse iure dolore excepturi provident adipisci similique autem necessitatibus, perferendis est? Expedita, odit cumque.</p>    
 
     <hr><br>
-    <h1> aula 01 capítulo 22 módulo 04</h1>
-    <p></p>
+    <h1>inconvenientes do iframe. aula 06 capítulo 22 módulo 04</h1>
+    <p>frame não é muito utilizado porém confinua em funcionamento. iframe é bastante utilizado, mas pode ter algum incoveniente. mecanismos de buscas podem ter dificuldade em identificar conteúdos dentro de iframes, afetando a eficiência da busca. softwares leitores de tela podem ter dificuldade para ler o conteúdo dentro de iframes afetando a acessibilidade de pessoas com alguma difilculdade de visão que usam esses softwares. a navegação dentro de iframes pode ser um pouco complicada, voltar página, target etc, ou mesmo a responsividade do site que estiver dentro do site. iframes podem ser muito inseguros na questão de trazer conteúdo completo para um iframe, um site que inseguro ou que eventualmente esteja capturando dados ou facilitando ataques pode trazer essa insegurança para o site onde o iframe está.</p>
     
     <hr><br>
-    <h1> aula 01 capítulo 22 módulo 04</h1>
-    <p></p>
-    <!-- fim de capítulo novo -->
+    <h1>tornando iframes mais seguros. aula 07 capítulo 22 módulo 04</h1>
+    <p>uma forma de deixar o iframe mais seguro é usar o parâmetro sandbox dentro da tag iframe. por padrão sandbox é sandbox que bloqueia o envio de tudo dentro do iframe. sandbox ligado sandbox é o máximo desse parâmetro para segurança. a opção allow-same-origin no sandbox permite o uso de formulários dentro do iframe, desde que seja da mesma origem do iframe. no atributo sandbox pode ser adicionado vários valores de configurações, desde que tenha um espaço entre elas e fique entre parênteses. para permitir formulários dentro do iframe, no parâmetro sandbox usar: allow-forms permitir formulários. para permitir o conteúdo como srcdoc usar: allow-scripts permitir scripts também libera ou bloqueia a execução de scripts  em javascript</p>
+    <p>outra maneira de dar mais segurança é configurar o parâmetro referrerpolicy, que tem como valor padrão no-referrer-when-downgrade, com o valor: no-referrer, faz com que o conteúdo dentro do iframe não irá coletar nenhum tipo de dado do usuário. no-referrer em conjunto de sandbox é o máximo de segurança para o usuário</p>
+
+    <h1>site principal</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quo inventore blanditiis error sed tempora voluptatibus, odio eos facere? Earum voluptatibus, at eum officia a expedita? Corporis adipisci corrupti laudantium.</p>
+
+    <iframe src="extras/pag004.html" sandbox="sandbox">sandbox como sandbox impede o envio de formulários</iframe>
+
+    <iframe src="extras/pag004.html" sandbox="sandbox" referrerpolicy="no-referrer-when-downgrade">navegador incompatível</iframe>
+
+    <iframe src="extras/pag004.html" sandbox="allow-same-origin allow-forms allow-scripts " referrerpolicy="no-referrer">navegador incompatível</iframe>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni dolorum, voluptas necessitatibus sit officia consequuntur non ad. Ad, ipsa repellat, eum amet fugiat voluptas quidem quae, ea quas corporis aperiam.</p>
+
+    <h1>página com javascript</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum reiciendis, deserunt quam unde saepe quaerat hic expedita consequatur odit perferendis, animi nihil magnam architecto aliquam quod itaque laudantium tempora esse.</p>
+    <iframe src="extras/pag005.html"></iframe>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae nemo rerum deleniti porro iste vero officiis ducimus unde rem, repellat sequi inventore quo eum aut distinctio? Quisquam, alias. Tenetur, laudantium.</p>
+
+    <hr><br>
+    <h1>dicas para iframes melhores. aula 08 capítulo 22 módulo 04</h1>
+    <p>dentro do iframe pode ser adicionado vídeos direto do youtube ou vimeo attravés do compartilhamento via incorporação desses sites. também pode adicionar mapas do google maps ou waze, também com compartilhamento via incorporação desses sites. documentos do google docs também podem ser incorporados usando iframes, porém usando a opção publicar na web e seguida incorporar na opção arquivo e compartilhar.</p>
+
+    <h1>adicionando conteúdos.</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem tenetur esse eos deleniti sapiente ipsa aperiam ipsam, nobis dicta dignissimos soluta quas sed repudiandae in corporis beatae vitae temporibus perspiciatis!</p>
+    
+    <h2>conteúdos dentro do iframe</h2>
+    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/179019718?h=286cfd2e24" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+    
+    <h2>mapas do google</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3748.571565153021!2d-40.745576025010934!3d-20.026488441319945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb9d646905ce0b5%3A0x23ce5785f6263fae!2sR.%20Henrique%20Potratz%2C%20150%20-%20Centro%2C%20Santa%20Maria%20de%20Jetib%C3%A1%20-%20ES%2C%2029645-000!5e0!3m2!1spt-BR!2sbr!4v1702256287486!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+    <h2>mapa do waze</h2>
+    <iframe src="https://embed.waze.com/iframe?zoom=16&lat=-19.877771&lon=-44.985648&ct=livemap" width="600" height="450" allowfullscreen></iframe>
+
+    <h2>documento do google docs</h2>
+    <iframe id="framea8c22m04" src="https://docs.google.com/document/d/e/2PACX-1vSO34sAlrkIYQBRqjUo7k8IUWY6pMAR30ePFw5kagt8ulI3NHGPGMlTMv0/pub?embedded=true"></iframe>
+
+    <!-- fim do capítulo 22 -->
 
 
     
     <!-- início de capítulo novo -->
     <hr><br>
     <hr><br>
-    <h1>aula 01 capítulo 23 módulo 04</h1>
+    <h1>criando um projeto do zero. aula 01 capítulo 23 módulo 04</h1>
     <p></p>
 
     <hr><br>
@@ -94,7 +160,7 @@
     
     <hr><br>v
     <p></p>
-    <!-- fim de capítulo novo -->
+    <!-- fim do capítulo 23 -->
 
 
 
@@ -127,7 +193,7 @@
     <hr><br>
     <h1></h1>
     <p></p>
-    <!-- fim de capítulo novo -->
+    <!-- fim do capítulo 24 -->
 
     <!-- início de capítulo novo -->
     <hr><br>

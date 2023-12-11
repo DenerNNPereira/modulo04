@@ -6,3 +6,15 @@ iframe#i1a3c22m4 {
     display: block;
     margin: auto;
 }
+
+iframe#framea4c22m04 {
+    width: 80vw;
+    height: 300px;
+    border: 2px solid blue;
+}
+
+iframe#framea8c22m04 {
+    width: 60vw;
+    height: 600px;
+    border: 2px solid greenyellow;
+}
