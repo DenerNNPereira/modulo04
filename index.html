@@ -163,14 +163,35 @@
     <p>uma forma de fazer os links ficarem empilhados, um em cima do outro, é usar a tag br após cada link. para alinhar a direita, uma forma bem simples é configurar um seletor css para o box onde estão e configurar o atributo text-aling para a direção desejada, neste caso direita rigth.</p>
     <p>a configuração no css box-sizing configurada como border-box faz com que a borda que for adicionada ao elemento, imagem ou caixa, seja considerada como parte o elemento, caso um hover adicione borda a um elemento, por exemplo, essa borda já está sendo considerada no elemento, só não estará visível até que o hover seja ativado.</p>
     <p>para fazer o elemento ter um movimento dentro do hover usar a configuração no parâmetro transform com translate com dois valores, sendo o primeiro para direita e esquerda e o segundo acima e abaixo em relação ao eixo x e y então valores negativos direciona para esquerda e acima e valores positivos direciona para direita e abaixo. caso o elemento que receba essas configurações tenha sombra o ideal é que esta acompanhe o movimento. para a sombra acompanhar o movimento basta que um box-shadow seja adicionado ao hover e no box-shadow dentro do hover seja adicionado do valor sem hover mais o valor do translate que do mesmo hover.</p>
+    <p>o parâmetro transition pode ser usado pra acelerar ou desacelerar algum efeito ou movimento, usa-se o transition e como atributo o transform que configura o movimento, seguido do tempo de duração do movimento: transition: transform 1s; onde 1s significa que a transição do movimento configurado no transform irá precisar de 1 segundo para ser concluído, caso esse tempo envolva fração de segundo usar ponto . se 1 segundo e meio: 1.5s ou se meio segundo 0.5s ou apenas .5s e se tiver mais movimentos que precisem mais configuração de tempo será necessário mais parâmetros transition, que pode ser resumido shorthand com uma vírgula seguida do nome do atributo ou parâmetro e seu tempo de execução.</p>
+
+    <code>
+        border-radius: 50%;<br>
+        text-align: rigth;<br>
+        box-sizing: border-box;<br>
+        transform: translate(-3px, -3px);<br>
+        transition: transform 1s, border .5s;
+    </code>
 
     <hr><br>
-    <h1>aula 01 capítulo 23 módulo 04</h1>
-    <p></p>
+    <h1>criando as páginas de cada rede social. aula 06 capítulo 23 módulo 04</h1>
+    <p>para esconder a barra de rolagem usar o comando -webkit-scrollbar e especificar a largura width e altura height: ::-webkit-scrollbar{ width: 0px; height: 0px;} como é comando deve ser precedido por dois dois pontos ::</p>
+    <p>vários arquivos html podem usar as mesmas configurações de um arquivo css, só é necessário linkar usando a tag link em cada arquivo html</p>
+
+    <code>
+        ::-webkit-scrollbar {
+            width: 0px;
+            height: 0px;
+        }
+    </code>
     
     <hr><br>
-    <h1></h1>
-    <p></p>
+    <h1>personalizando as imagens do projeto. aula 07 capítulo 23 módulo 04</h1>
+    <h2>nesta aula, vídeo, é usado o gimp</h2>
+    <p>para fazer uma imagem comprida tirou vários prints de tela do celular e fazer uma montagem. essa montagem será feita no gimp.</p>
+    <p>no gimp, abrir a primeira imagem e ir no menu imagem e mudar o tamanho da tela de pintura, alterar bastante a altura. com a seta de seleção posicionar no topo. selecionar a segunda imagem e posicionarde acordo com a primeira imagem. ao escolher as imagens selecionar apenas o pedaço que completa a imagem já adicionada</p>
+    <p>para remover o que sobrar de altura sem imagens usar: ferramenta de corte shift+c, e marcar apenas a parte que é necessário e apertar enter.</p>
+    <p>clicar em redimensionar para ajustar o tamanho de pixels da imagem se ela for muito grande. por fim exportar a imagem em formato png ou jpg por exemplo.</p>
     <!-- fim do capítulo 23 -->
 
 
@@ -178,11 +199,11 @@
     <!-- início de capítulo novo -->
     <hr><br>
     <hr><br>
-    <h1></h1>
+    <h1>como criar formulários com html5. aula 01 capítulo 24 módulo 04</h1>
     <p></p>
 
     <hr><br>
-    <h1></h1>
+    <h1>. aula 02 capítulo 24 módulo 04</h1>
     <p></p>
 
     <hr><br>
