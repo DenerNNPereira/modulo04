@@ -18,3 +18,10 @@ iframe#framea8c22m04 {
     height: 600px;
     border: 2px solid greenyellow;
 }
+
+form#forma1c24m4 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 2px solid blue;
+    padding: 10px;
+    width: 40vw;
+}
