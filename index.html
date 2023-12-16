@@ -204,7 +204,7 @@
     <p>o input tipo submit é o input de submeter, enviar os dados preenchidos no formulário para o servidor, por exemplo, criando um botão clicável ao invés de um campo digitável de texto. o parâmetro value significa o que vai aparecer dentro do botão de submit.</p>
     <p>normalmente não se tem uma conexão entre o texto antes um input e o campo de input digitável logo após, porém há formas de linkar, conectar um com o outro o que vai ajudar mecanismos de busca de outros sites.</p>
 
-    <h1>formulário</h1>
+    <h1>formulário 1</h1>
     <form id="forma1c24m4">
         <p>Nome: <input type="text" name="nome" id="nome"></p>
         <p>Sobrenome: <input type="text" name="Sobrenome" id="sobrenome"></p>
@@ -212,15 +212,48 @@
     </form>
 
     <hr><br>
-    <h1>. aula 02 capítulo 24 módulo 04</h1>
-    <p></p>
+    <h1>usar label vai melhorar seus formulários. aula 02 capítulo 24 módulo 04</h1>
+    <p>para desligar o auto completar dos campos de preenchimento dos formulários, usar o parâmetro autocomplete com a configuração off, auto completar desligado: autocomplete="off" dentro da tag form.</p>
+    <p>a ação action vai ser iniciada quando clicar no botão de submeter submit, o parâmetro action: action="nomedoarquivo.extensão" fica dentro da tag form e recebe a configuração do arquivo a ser usado para processar o conteúdo do formulário</p>
+    <p>a diferença entre name nome e id identificador. para algumas linguagens como php e html, o parâmetro name é mais utilizado, enquanto que para javascript por exemplo é mais utilizado o id.</p>
+    <p>para fazer a ligação entre o texto que normalmente precede um input é importante usar etiqueta label. a tag label etiqueta tem o parâmetro for que é para onde o texto que está dentro das tags label e /label direciona, para um campo de preenchimento, deve ser o conteúdo do parâmetro name ou id, neste caso usei id. quando o label está funcionando corretamente, ao clicar no texto que precede um campo de input esse input já estará pronto para preenchimento, será selecionado, e ao passar o mouse em cima do texto ele já mostra a qual input ele pertence.</p>
+    <p>ao enviar um formulário submeter, dependendo do método utilizado, a url receberá esses dados e estes estarão visíveis na url do navegador, para separar o que é endereço do site e o que é dados do formulário tem um ponto de interrogação ? onde antes é endereço e depois é dados do formulário, indicado qual parâmetro foi enviado e qual dado foi preenchido, um e comercial & indica que é um outro campo.</p>
+
+    <h1>formulário 2</h1>
+    <form id="form2a2c24m4" autocomplete="off" action="cadastro.php">
+        <p>
+            <label for="inome">Nome: </label>
+            <input type="text" name="nome" id="inome">
+        </p>
+        <p>
+            <label for="isobrenome">Sobrenome: </label>
+            <input type="text" name="sobrenome" id="isobrenome">
+        </p>
+        <p><input type="submit" value="Enviar"></p>
+    </form>
 
     <hr><br>
-    <h1>. aula 03 capítulo 24 módulo 04</h1>
-    <p></p>
+    <h1>métodos get e post para formulários. aula 03 capítulo 24 módulo 04</h1>
+    <p>dentro de uma tag é atributo</p>
+    <p>por padrão o método de envio de dos formulários é get, se não especificado na tag form. para especificar um método usar a tag method método e configurar com o método escolhido, são dois métodos get e post. não tem diferença entre maiúsculo ou minúsculo quando adicionar post ou get no atributo method.</p>
+    <p>o método get envia os dados do formulário através da url. o método post envia os dados do formulário de forma interna, que pode ser acessado da seguinte forma: na ferramenta de inspeção entrar em network, depois em headers e no arquivo que foi enviado, após uma possível rolagem de tela os dados, depois de enviados clicado em no botão de submit, estarão visíveis. dependendo da versão do navegador depois de network clicar no arquivo enviado e em payload para encontrar os dados enviados do formulário. para proteger esses dados independente se get ou post é necessário usar o https que é um protocolo de transmissão de dados que possui criptografia.</p>
+    <p>quando usar cada método: get é pra quando os dados que o usuário digitou não são sensíveis não são senha ou cartão de crédito por exemplo, ou uma simples busca, neste caso uma busca fica compartilhável, o envio de dados através do método get é limitado a 3000 bites aproximadamente 3000 letras no campo da url. para o método post: usar o post quando os dados do formulário para dados sensíveis ou fotos ou arquivos ou mais de 3000 bites, pode ser apenas a questão de não deixar os dados visíveis na url.</p>
+
+    <h1>formulário 3</h1>
+    <form id="form3a3c24m4" method="post" autocomplete="off" action="cadastro.php">
+        <p>
+            <label for="i3nome">Nome: </label>
+            <input type="text" name="3nome" id="i3nome">
+        </p>
+        <p>
+            <label for="i3sobrenome">Sobrenome: </label>
+            <input type="text" name="3sobrenome" id="i3sobrenome">
+        </p>
+        <p><input type="submit" value="Enviar"></p>
+    </form>
 
     <hr><br>
-    <h1>. aula 04 capítulo 24 módulo 04</h1>
+    <h1>criando caixas de texto e de senha. aula 04 capítulo 24 módulo 04</h1>
     <p></p>
 
     <hr><br>
@@ -235,6 +268,7 @@
     <h1></h1>
     <p></p>
     <!-- fim do capítulo 24 -->
+
 
     <!-- início de capítulo novo -->
     <hr><br>

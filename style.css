@@ -19,9 +19,26 @@ iframe#framea8c22m04 {
     border: 2px solid greenyellow;
 }
 
+
+
+
 form#forma1c24m4 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border: 2px solid blue;
     padding: 10px;
     width: 40vw;
+}
+
+form#form2a2c24m4 {
+    border: 2px dashed green;
+    padding: 10px;
+    width: 40vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+form#form3a3c24m4 {
+    border: 2px solid yellow;
+    padding: 10px;
+    width: 40vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
