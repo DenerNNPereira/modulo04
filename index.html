@@ -254,14 +254,81 @@
 
     <hr><br>
     <h1>criando caixas de texto e de senha. aula 04 capítulo 24 módulo 04</h1>
+    <p>o input do tipo type senha password altera o texto digitado por asterístico * ou outro caractere especial para não exibir a senha de usuário. o input do tipo type limpar reset limpa apaga tudo que foi digitado no formulário.</p>
+    <p>se o método de envio for get, o campo senha vai ser mostrado na url porém com a senha digitada. para formulários que possuem senha, usar o método post que a senha não fica na url, porém na ferramenta de desenvolvedor dos navegadores ainda é possível verificar qual senha foi digitada, para proteger melhor as senhas usar e estudar protocolos https de segurança.</p>
+    <p>o atributo required requerido obrigatório não permite que o formulário seja enviado em branco. para definir um tamanho mínimo ou máximo de dígitos em um campo de formulário os atributos minlenth tamanho mínimo com valor e maxlenth tamanho máximo com valor, caso os valores nao estejam dentro dos limites definidos um aviso será mostrado e o formulário não será enviado. definir um mínimo e um máximo ajuda na questão do tamanho de um banco de dados, o parâmetro maxlength não permite que sejam inseridos mais caracteres que o definido.</p>
+    <p>o parâmetro size dentro de um input define o tamanho da caixa digitável criando uma rolagem lateral quando o número de caracteres digitados for maior que o espaço da caixa porém dentro do limite maxlength</p>
+    <p>o parâmetro placeholder local pra colocar coisas, dá uma dica dentro do campo digitável do input que desaparece automaticamente quando o primeiro caractere for digitado.</p>
+    <p>para o autocomplete quando on ligado, sugerir completar com o mesmo tipo do input, se nome sugerir nomes já digitados, se endereço sugerir endereços já digitados, o autocomplete deve estar on no form e a caixa digitável deve dizer que ela é para nome ou nome completo ou endereço etc, em cada input o autocomplete deve estar configurado para mostrar esse tipo de sugestão, username para nome de usuário, new-password para um cadastro de usuário onde ele vai digitar uma nova senha, e current-passoword para uma senha já utilizada no caso de um login por exemplo</p>
+    <p>na tag form de formulário pode adicionar o parâmetro target, se configurado como _blank ao clicar em enviar ou o botão tipo submit será aberto em nova aba, da mesma forma que o quando adicionado em links.</p>
+
+    <h1>formulário 3</h1>
+    <form id="form4a4c24m4" method="post" autocomplete="on" action="cadastro.php" target="_blank">
+        <p>
+            <label for="i1usuario">Usuário: </label>
+            <input type="text" name="1usuario" id="i1usuario" required minlength="4" maxlength="30" size="10" placeholder="nome de usuário" autocomplete="username">
+        </p>
+        <p>
+            <label for="i1senha">Senha: </label>
+            <input type="password" name="1senha" id="i1senha" required minlength="6" autocomplete="new-password">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+
+    <hr><br>
+    <h1>elementos number, month, date e time em formulários html. aula 05 capítulo 24 módulo 04</h1>
+    <p>ao se criar o input pode escolher o tipo, quando o tipo for number número o campo digitável aceita apenas números ignorando as letras digitadas.</p>
+    <p>no input tipo number número pode adicionar um limite da valor a ser digitado usando min e max mínimo e máximo, quando min receber o valor 1 o campo não aceitará valores menores que 1, 0 ou negativos por exemplo, com o max definido como 10 o campo não aceitará valores superior a 10 por exemplo. para que o campo aceite números quebrados, números reais com vírgula, usar o parâmetro step com o valor separado por ponto, para aceitar 0,5: step="0.5" e nas setas do campo number irá pular de 0,5 em 0,5 e pode adicionar outros valores.</p>
+    <p>o input tupo mês month adiciona uma caixa de calendário para se preencher um período de tempo.</p>
+    <p>ao usar o atributo value dentro da tag input o valor que o value receber será preenchido automaticamente substituindo o valor de placeholder, porém permitindo a alteração se necessário. no caso de unput tipo month ao usar o value primeiro o ano e em seguida o mês. o atributo value pode ser configurado com ajuda de um script de javascritp que permite capturar a data atual.</p>
+    <p>um input do tipo date data cria uma caixa para preenchimento de data completa, dia mês e ano. ao usar o value a ordem de preenchimento é ano mês e dia. o atributo value pode ser configurado com ajuda de um script de javascritp que permite capturar a data atual.</p>
+    <p>um input do tipo hora data cria uma caixa para preenchimento de hora completa, hora e minutos. o atributo value pode ser configurado com ajuda de um script de javascritp que permite capturar a hora atual.</p>
+
+    <h1>formulário 4</h1>
+    <form id="form5a5c24m4" method="get" autocomplete="on" action="cadastro.php">
+        <p>
+            <label for="i2nome">Nome: </label>
+            <input type="text" name="2nome" id="i2nome" required minlength="4" maxlength="30" placeholder="Nome completo" autocomplete="name">
+        </p>
+        <p>
+            <label for="i1media">Média</label>
+            <input type="number" name="1media" id="i1media" min="0" max="10" placeholder="de 0 a 10" step="0.5" required value="5">
+        </p>
+        <p>
+            <label for="i1mes">Período letivo</label>
+            <input type="month" name="1mes" id="i1mes" value="2023-12">
+        </p>
+        <p>
+            <label for="i1dia">Data da prova</label>
+            <input type="date" name="1dia" id="i1dia" value="2023-12-19">
+        </p>
+        <p>
+            <label for="i1hora">Horário da prova</label>
+            <input type="time" name="1hora" id="i1hora">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+
+    <hr><br>
+    <h1>compatibilidade com navegadores. aula 06 capítulo 24 módulo 04</h1>
     <p></p>
 
     <hr><br>
-    <h1>. aula 05 capítulo 24 módulo 04</h1>
+    <h1>. aula 07 capítulo 24 módulo 04</h1>
     <p></p>
 
     <hr><br>
-    <h1></h1>
+    <h1>. aula 08 capítulo 24 módulo 04</h1>
+    <p></p>
+
+    <hr><br>
+    <h1>. aula 09 capítulo 24 módulo 04</h1>
     <p></p>
 
     <hr><br>

@@ -42,3 +42,14 @@ form#form3a3c24m4 {
     width: 40vw;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+form#form4a4c24m4 {
+    border: 2px dashed greenyellow;
+}
+
+form#form5a5c24m4 {
+    border: 2px solid lightblue;
+    padding: 10px;
+    width: 40vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
