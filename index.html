@@ -317,22 +317,139 @@
 
     <hr><br>
     <h1>compatibilidade com navegadores. aula 06 capítulo 24 módulo 04</h1>
-    <p></p>
+    <p>cada navegador tem um suas características visuais, alguns inputs podem ser mostrados com algun detalhe que não vai aparecer em outros navegadores. da mesma forma nos navegadores de celular, alguns navegadores de celular podem funcionar algum ou todos, mas o mesmo navegador em desktop pode não funcionar. tem algumas formas de fazer funcionar, porém são mais complexas.</p>
 
     <hr><br>
-    <h1>. aula 07 capítulo 24 módulo 04</h1>
-    <p></p>
+    <h1>formulários com telefone e e-mail. aula 07 capítulo 24 módulo 04</h1>
+    <p>o input tipo email e-mail adiciona uma caixa para digitar um email que verifica apenas se o valor digitado possui o símbolo de arroba @</p>
+    <p>o input tipo tel telefone adiciona uma caixa para digitar um número de telefone, este tipo não possui muitos filtros naturais. o tipo tel compatibilidade com aparelhos celulares onde consegue puxar números dos contatos do celular.</p>
+    <p>pesquisar sobre expressões regulares RegEx</p>
+    <p>regular expressions para definir um padrão de digitação usando o atributo pattern padrão inicia com ^ e termina com cifrão $. um RegEx para o pattern do input tipo tel pode ser escrito entre aspas duplas "" e se for dígitos pode ser \d que significa dígitos ou abre colchetes e adiciona o intervalo separado por traço - ficando: "^\d$" ou "^[0-9]$" em seguida, entre chaves {} colocar quantos dígitos serão necessários e para definir o formato adicionar um traço - ou o símbolo necessário e repetir, ficando: pattern="^[0-9]{4}-[0-9]{4}$" ou pattern="^\d{4}-\d{4}$". caso tenha a opção de uma quantidade ou outra de dígitos, por exemplo, uma vírgula entre valores que ficam dentro de chaves {} indica opções de quantidade de  dígitos: pattern="^[0-9]{4,5}-[0-9]{4}$" ou pattern="^\d{4,5}-\d{4}$". para dizer que algum dado que vai ser digitado precisa estar entre parênteses em uma RegEx a combinação de símbolos \(valoraqui)\ indica abrir e fechar parênteses: pattern="^\([0-9]{2}\)[0-9]{4}-[0-9]{4}$" ou pattern="^\(d{2}\)\d{4}-\d{4}$"</p>
+    <p>para agrupar campos de formulário a tag fieldset grupo de campo faz uma borda, os campos de formulários que vão ser agrupados devem, portanto, estar entre as tags fieldset e barra fieldset \fieldset. a tag legend legenda adiciona uma legenda na borda do fieldset. as tags fieldset e legend podem se configuradas via css com seletores.</p>
+
+    <h1>formulário 5</h1>
+    <form id="form6a7c24m4" method="get" autocomplete="on" action="cadastro.php">
+        <!-- estudar RegEx expressões regulares para o pattern -->
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <p>
+                <label for="1imail">E-mail</label>
+                <input type="email" name="1mail" id="1imail" required autocomplete="email">
+            </p>
+            <p>
+                <label for="1itel">Telefone</label>
+                <input type="tel" name="1tel" id="1itel" autocomplete="tel" required pattern="^[0-9]{4}-[0-9]{4}$">
+            </p>
+            <p>
+                <label for="1itel">Telefone</label>
+                <input type="tel" name="1tel" id="1itel" autocomplete="tel" required pattern="^\([0-9]{2}\)[0-9]{4}-[0-9]{4}$">
+            </p>
+            <p>
+                <label for="1itel">Telefone</label>
+                <input type="tel" name="1tel" id="1itel" autocomplete="tel" required pattern="^\(\d{2}\)\d{4,5}-\d{4}$">
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+
 
     <hr><br>
-    <h1>. aula 08 capítulo 24 módulo 04</h1>
-    <p></p>
+    <h1>checkbox e radio button em html. aula 08 capítulo 24 módulo 04</h1>
+    <p>o input do tipo checkbox adiciona uma caixa marcável ou de seleção. sem a tag label direcionando para o id do input será necessário marcar exatamente na caixa do tipo checkbox, se o label estiver direcionando para o input pelo atributo for e id pode clicar em cima do texto que vai marcar a caixa de seleção do input.</p>
+    <p>o input do tipo radio permite que seja marcado apenas uma opção de várias, se o atributo name nome do input tipo radio estiver com valores diferentes para cada input tipo radio o sistema permitirá que todas sejam marcadas mas não permitirá desmarcar, se o atributo name nome do input tipo radio estiver com o mesmo valor em todos os inputs tipo radio apenas um poderá ficar marcado, desmarcando automaticamente o anterior caso um novo seja marcado.</p>
+    <p>caso haja a necessidade de algum checkbox ou radio já estar marcado, dentro da tag input adicionar o atributo checked, e podem ser desmarcados caso o usuário decisa desmarcar. o atributo checked pode ser adicionado a vários inputs tipo checkbox, porém em apenas um input tipo radio, caso vários input tipo radio recebam o atributo checked apenas o último será considerado ao carregar a página.</p>
+    <p>no input tipo radio é necessário um atributo value com valores diferentes para cada input, visto que se não tiver value será enviado apenas como on ou off, com valor de value diferente será enviado o valor do value ao se clicar em submit.</p>
+
+    <h1>formulário 6</h1>
+    <form id="form7a8c24m4" action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Sexo (mesmo name, vários checked)</legend>
+            <input type="radio" name="Sexo1" id="i1sxmas" checked>
+            <label for="Sexo">Masculino</label><br>
+            <input type="radio" name="Sexo1" id="i1sxfem" checked>
+            <label for="Sexo">Feminino</label>
+        </fieldset>
+        <fieldset>
+            <legend>Sexo (mesmo name, 1 checked)</legend>
+            <input type="radio" name="Sexo2" id="i2sxmas" value="m">
+            <label for="Sexo">Masculino</label><br>
+            <input type="radio" name="Sexo2" id="i2sxfem" value="f" checked>
+            <label for="Sexo">Feminino</label>
+        </fieldset>
+        <fieldset>
+            <legend>Sexo (name diferente)</legend>
+            <input type="radio" name="1sxmas" id="i1sxmas">
+            <label for="Sexo">Masculino</label><br>
+            <input type="radio" name="1sxfem" id="i1sxfem">
+            <label for="Sexo">Feminino</label>
+        </fieldset>
+        <fieldset>
+            <legend>Marque</legend>
+            <input type="checkbox" name="1esbas" id="i1esbas">
+            <label for="i1esbas">Basquete</label> <br>
+            <input type="checkbox" name="1esfut" id="i1esfut">
+            <label for="i1esfut">Futebol</label> <br>
+            <input type="checkbox" name="1esnat" id="i1esnat" checked> Natação <br>
+            <input type="checkbox" name="1esten" id="i1esten"> Tênis <br>
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
 
     <hr><br>
-    <h1>. aula 09 capítulo 24 módulo 04</h1>
-    <p></p>
+    <h1>elementos color, range e file em html. aula 09 capítulo 24 módulo 04</h1>
+    <p>o input do tipo color cor permite que o usuário escolha uma cor e após enviar será enviado o código hexadecimal da cor antecedido pelo código do símbolo da serquilha # hastag, por padrão a cor inicial é preto e para alterar adicionar o atributo value com o valor da cor escolhida. navegadores diferentes podem apresentar esse campo de forma diferente.</p>
+    <p>o input do tipo range adiciona uma barra móvel, que por padrão representa de 0 mínimo e 100 máximo e começa em 50 ou metade. pode ser usado os atributos min mínimo e max máximo para definir o intervalo de valores, pode usar o value com um valor para definir um valor inicial, mesmo assim permite que o usuário modifique.</p>
+    <p>o input tipo image imagem carrega uma imagem ou foto, porém é o desenvolvedor que escolhe e não o usuário</p>
+    <p>o input tipo file permite que o usuário carregue um arquivo ou foto e envie via formulário.</p>
+    <p>quando o formulário tiver um input tipo file para envio de arquivos o método de envio do formulário deve ser o post, já que o método get não envia o arquivo e sim o nome do arquivo.</p>
+
+    <form id="form8a9c24m4" action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>cor input tipo color</legend>
+            <p>
+                <label for="i1cor">Cor padrão: </label>
+                <input type="color" name="1cor" id="i1cor">
+            </p>
+            <p>
+                <label for="i2cor">Cor definida: </label>
+                <input type="color" name="12or" id="i2cor" value="#00ff00">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>range nível input tipo range</legend>
+            <p>
+                <label for="i1nivel">Nível de satisfação padrão: </label>
+                <input type="range" name="1nivel" id="i1nivel">
+            </p>
+            <p>
+                <label for="i2nivel">Nível de satisfação 2 definido max e min: </label>
+                <input type="range" name="2nivel" id="i2nivel" min="2" max="7" value="5">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>File arquivo</legend>
+            <p>
+                <label for="i1foto">Arquivo</label>
+                <input type="file" name="1foto" id="i1foto">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>ações</legend>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </fieldset>
+    </form>
 
     <hr><br>
-    <h1></h1>
+    <h1>select, datalist e textarea em html. aula 10 capítulo 24 módulo 04</h1>
     <p></p>
     <!-- fim do capítulo 24 -->
 
