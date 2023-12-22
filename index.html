@@ -409,6 +409,7 @@
     <p>o input tipo file permite que o usuário carregue um arquivo ou foto e envie via formulário.</p>
     <p>quando o formulário tiver um input tipo file para envio de arquivos o método de envio do formulário deve ser o post, já que o método get não envia o arquivo e sim o nome do arquivo.</p>
 
+    <h1>formulário 7</h1>
     <form id="form8a9c24m4" action="cadastro.php" method="get" autocomplete="on">
         <fieldset>
             <legend>cor input tipo color</legend>
@@ -450,14 +451,148 @@
 
     <hr><br>
     <h1>select, datalist e textarea em html. aula 10 capítulo 24 módulo 04</h1>
-    <p></p>
+    <p>a tag select finaliza com barra select /select enquanto input não precisa. a tag select cria uma barra de escolha com opções definidas pela tag option que precisa ser fechada com barra option /option. a tag option receberá um atributo value com o valor de referência enquanto que entre option e /option estará o valor visível ao usuário. dentro das opções do option pode separar por grupo usando a tag optgroup opções de grupo com um label de referência a qual grupo pertence e entre as tags optgroup e barra optgroup /optgroup ficará as opções options que pertencem a este grupo.</p>
+    <p>para que uma opção já aparecer marcada selecionada quando a página é carregada usar o atributo selected na option que será selecionada e o usuário poderá alterar se necessário. fora da tag optgroup pode deixar uma option de value vazio já selecionada com selected porém com texto dizendo o que fazer neste campo.</p>
+    <p>um input tipo text text pode ser ligado a um datalist através do id no datalist sendo igual ao list do input, assim um campo digitável também terá opções já preparadas para escolha. o value deste campo pode ser removido, uma vez que o value aparece junto com a opção. o value parace junto com a opção no campo, porém o value pode ser removido e assim não vai aparecer. caso o usuário digitar uma opção que não tem no datalist, na proxima vez essa opção digitada aparecerá como uma opção, porém apenas para este usuário.</p>
+    <p>a tag textarea área de texto cria um campo digitável expansível. pode ser limitado em rows linhas e cols colunas na apresentação, mas mesmo assim alter seu tamanho pelo usuário. o atributo cols na tag textarea diz quando o texto digitado será quebrado em uma nova linha. o atributo rows linha não limita o máximo de linhas a ser digitado, pois neste input é infinito, ao se digitar mais do que a área visível uma barra de rolagem é criada na lateral do campo. ao usar o input do tipo textarea o ideal é usar o método post para o envio de formulários. o que for digitado entre as tags textarea e barra textarea /textarea aparecerá no campo digitável para o usuário, porém já como texto e o usuário precisa apagar esse texto manualmente, uma vez que textarea não aceita placeholder.</p>
+
+    <h1>formulário 8</h1>
+    <form id="form9a10c24m4" action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Seletor</legend>
+            <p>
+                <label for="i1est">Estado</label>
+                <select name="1est" id="i1est">
+                    <option selected value="">--- Escolha um Estado ---</option>
+                    <optgroup label="Região Sudeste">
+                        <option value="MG">Minas Gerais</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="SP">São Paulo</option>
+                    </optgroup>
+                    <optgroup label="Região Nordeste">
+                        <option value="MA">Maranhão</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p>
+                <label for="i1profis">Profissão: </label>
+                <input type="text" name="1profis" id="i1profis" list="lisprofis">
+                <datalist id="lisprofis">
+                    <option value="ADM">Administrador</option>
+                    <option>Contador</option>
+                    <option value="DEV">desenvolvedor</option>
+                    <option>Professor</option>
+                </datalist>
+            </p>
+            <p>
+                <label for="i1msg">Mensagem: </label><br>
+                <textarea name="1msg" id="i1msg" cols="30" rows="10"></textarea>
+            </p>
+            <p>
+                <label for="i2msg">Mensagem: </label><br>
+                <textarea name="2msg" id="i2msg" cols="30" rows="10">O que aparece aqui será enviado com o formulário, mesmo o que está no arquivo html. textarea não aceita placeholder.</textarea>
+            </p>
+            
+        </fieldset>
+       
+        <fieldset>
+            <legend>ações</legend>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </fieldset>
+    </form>
+
+    <hr><br>
+    <h1>elemento output em formulários html. aula 11 capítulo 24 módulo 04.</h1>
+    <p>usando javascript e a tag output, tag de saída. a tag output receberá o valor definido pelo código javascript dentro de um input. o código javascript deve ser verificado letras maiúsculas e minúsculas. no caso do exemplo abaixo: os inputs tipo number número 1 e 2 se tornaram as variáveis, que serão somadas e mostradas na tag output de name nome soma. o atributo oninput inicia um código javascript que: direciona para o output de id isoma tudo que estiver inner no html HTML: oninput="isoma.innerHTML", este receberá = o valor value da variável tipo Number número definida entre parênteses () através do id, neste caso i1num1 ficando esta parte: Number(i1num1.value) e então será somada + ao o valor value da variável tipo Number número definida entre parênteses () através do id, neste caso i1num2 ficando esta parte: Number(i1num2.value) e juntando tudo dentro do input: oninput="isoma.innerHTML = Number(i1num1.value) + Number(i1num2.value)" lembrando que todos inputs que serão considerados para o output devem receber um código javascript, neste caso 2 inputs tipo number estão recebendo o mesmo código javascript para enviar os dados para o output. resumindo: o que estiver dentro do output innerHTML de id isoma vai ser o valor que está dentro do input de id i1num1 somado com o valor que está dentro do input de id i1num2</p>
+    <p>a tag output e seu respectivo valor calculado não será enviado no formulário, uma vez que esse elemento é apenas para mostrar algo na tela para o usuário. para mais variáveis é necessário que todos inputs tenham o código javascript.</p>
+    <p>a tag output também funciona com input tipo range, da mesma forma do exemplo anterior, que pode ser em soma ou apenas para mostrar o número definido pela barra.</p>
+    <p>ao adicionar um script javascript no html, pode ser adicionado e criado funções, formulário 11. para que seja chamada a função o input recebe o atributo oninput que recebe a função: oninput="nomedafuncao()". na função, dentro da tag de script: script e barra script /script, será criada uma function função que terá o mesmo nome que será chamada no oniput, a função que recebe o nome e o oninput recebe o nome da função depois: function nomedafuncao() {} os comandos da função, o que a função faz, ficam entre as chaves {}. no exemplo para se pegar a idade, criar uma variável que receberá a data atual, usando a função de javascript Date para se pegar get a data completa FullYear: let nomedavariavel = new Date().getFullYear() então o output de id i1idade receberá inner do html HTML: i1idade.innerHTML = o valor Number da data atual definida pela variável: i1idade.innerHTML = Number(nomedavariavel) onde será reduzida - no valor value digitado pelo usuário no input tipo number de id i1ano: i1idade.innerHTML = Number(nomedavariavel) - Number(i1ano.value)</p>
+
+    <h1>formulário 9</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>formulário</legend>
+            <p>
+                <label for="i1num1">Número 1: </label>
+                <input type="number" name="1num1" id="i1num1" min="0" max="50" required oninput="isoma.innerHTML = Number(i1num1.value) + Number(i1num2.value) + Number(i1num3.value)">
+            </p>
+            <p>
+                <label for="i1num2">Número 2: </label>
+                <input type="number" name="1num2" id="i1num2" min="0" max="50" required oninput="isoma.innerHTML = Number(i1num1.value) + Number(i1num2.value) + Number(i1num3.value)">
+            </p>
+            <p>
+                <label for="i1num3">Número 3: </label>
+                <input type="number" name="1num3" id="i1num3" min="0" max="50" required oninput="isoma.innerHTML = Number(i1num1.value) + Number(i1num2.value) + Number(i1num3.value)">
+            </p>
+            <p>
+                <label for="i1soma">Soma = </label>
+                <output name="Soma" id="isoma">0</output>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Ações</legend>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </fieldset>
+    </form>
+
+    <h1>formulário 10</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>formulário2</legend>
+            <p>
+                <label for="i2num4">Número 4: </label>
+                <input type="range" name="2num4" id="i2num4" min="0" max="10" value="5" oninput="isoma2.innerHTML = Number(i2num4.value)">
+            </p>
+            <p>
+                <label for="i2soma">Valor do range (barra) = </label>
+                <output name="Soma2" id="isoma2">5</output>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Ações</legend>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </fieldset>
+    </form>
+
+    <h1>formulário 11</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>formulário3</legend>
+            <p>
+                <label for="i1ano">Ano de nascimento </label>
+                <input type="number" name="1ano" id="i1ano" min="1900" max="2023" oninput="nomedafuncao()">
+            </p>
+            <p>
+                <label for="i1idade">A idade é: </label>
+                <output id="i1idade">0</output>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Ações</legend>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </fieldset>
+    </form>
     <!-- fim do capítulo 24 -->
 
 
     <!-- início de capítulo novo -->
     <hr><br>
     <hr><br>
-    <h1></h1>
+    <h1>o que são media queries em css. aula 01 capítulo 25 módulo 04</h1>
     <p></p>
 
     <hr><br>
@@ -483,7 +618,7 @@
     <hr><br>
     <h1></h1>
     <p></p>
-    <!-- fim de capítulo novo -->
+    <!-- fim do capítulo 25 -->
 
 
     <!-- início de capítulo novo -->
@@ -554,5 +689,13 @@
 
     <h1>curso em vídeo módulo 04</h1>
     <p>módulo 4 inicia no capítulo 22, aula 01. eu já havia assistido essas aulas e salvado as anotações, porém perdi o arquivo inicial. tenho que voltar e assistir as 6 primeiras aulas do capítulo 22 módulo 04. já estava assistindo a aula 07.</p>
+
+    <!-- função para o formulário 11, aula 11 capítulo 24 módulo 04 -->
+    <script>
+        function nomedafuncao() {
+            let nomedavariavel = new Date().getFullYear()
+            i1idade.innerHTML = Number(nomedavariavel) - Number(i1ano.value)
+        }
+    </script>
 </body>
 </html>
