@@ -602,22 +602,26 @@
     <p>a configuração de display configurada como none: display: none; no css faz com que o o seletor css que receber esta configuração seja exibido na tela do navegador normalmente porém não será impresso. para configurar o que será impresso, essa configuração deve estar no arquivo css direcionado às configurações de impressão.</p>
     <p>um seletor css configurado com content e um conteúdo de texto entre aspas simples '' : content: 'texto'; não será exibido na tela do navegador, porém será impresso. para configurar o que será impresso, essa configuração deve estar no arquivo css direcionado às configurações de impressão.</p>
     <p>uma lista ul pode receber o atributo via seletor do css list-style-type: none; que dessa forma retira o marcador de ítem a bolinha dos ítens de lista li.</p>
-    <p>no links de css os atributos de media do tipo screen e print são os media type.</p>
+    <p>nos links de css os atributos de mídia do tipo screen e print são os mídia type.</p>
 
     <hr><br>
     <h1>múltiplas media features com css. aula 03 capítulo 25 módulo 04</h1>
-    <p></p>
+    <p>media query é a mesma coisa que media type mais media features.media features é característica de mídia e media type é tipo de mídia. </p>
+    <p>ao usar media queries para informar tipo e features bas adicionar junto com o atributo media dentro das aspas duplas "" o termo and seguido do media features: media="screen and (orientation: portrait)" neste caso orientation: portrait é referente a orientação do dispositivo, se em pé ou deitado, portrait é referente a em pé e landscape para deitado. media features deve estar entre parênteses () e cada media features precisa estar dentro de um par de parênteses (). o parâmetro media configurado como all, significa media query para todos os tipos de aparelho.</p>
 
     <hr><br>
-    <h1>. aula 04 capítulo 25 módulo 04</h1>
-    <p></p>
+    <h1>seguindo a orientação do dispositivo. aula 04 capítulo 25 módulo 04</h1>
+    <p>a orientação vai de acordo com a laargura da tela, no caso de navegadores web de computadores. cada arquivo css mostrará as configurações apenas se os dispositivos atenderem as configurações de media queries, conforme indicado no parâmetro media dos links de css.</p>
+    <p>na configuração de imagem de background com a opção size, background-size marcado como contain, a imagem se adaptará para cobrir todo o espaço da viewport, porém pode repetir, usar posicionamento position de background.</p>
 
     <hr><br>
-    <h1>. aula 05 capítulo 25 módulo 04</h1>
-    <p></p>
+    <h1>reunindo em um único css. aula 05 capítulo 25 módulo 04</h1>
+    <p>para usar apenas um css, no caso de ser através da tag style dentro do head do html, quando iniciar cada configuração indicar as media queries usando arroba @ seguido de media e o tipo, cad=so tenha features adicionar and e entre parênteses () e sem ponto e vírgula ; adicionar as configurações entre chaves {}: @media screen and (orientation: portrait) {configurações}</p>
+    <p>em um arquivo css separado pode receber as configurações de media query da mesma forma, porém no link não precisa indicar a media query. neste caso é desnecessário a tag style no head do html.</p>
+    <p>as configurações gerais podem receber media all. para porjetos grandes, com muito css o ideal é cada query em cada css. projetos pequenos podem ser feitos em um único css ou style.</p>
 
     <hr><br>
-    <h1>. aula 06 capítulo 25 módulo 04</h1>
+    <h1>mobile first. aula 06 capítulo 25 módulo 04</h1>
     <p></p>
 
     <hr><br>
