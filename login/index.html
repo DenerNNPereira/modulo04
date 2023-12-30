@@ -6,6 +6,7 @@
     <title>Login responsivo</title>
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/mediaqueries.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 <body>
     <main>
@@ -16,13 +17,22 @@
             <div id="formulario">
                 <h1>Login</h1>
                 <p>Seja bem vindo outra vez. Faça seu login. Espero que não tenha esquecido sua senha de novo.</p>
-                <form action="login.php" method="post">
-                    <label for="i1email"></label>
-                    <input type="email" name="1email" id="i1email">
-                    <label for="i2senha"></label>
-                    <input type="password" name="2senha" id="i2senha">
-                    <p><input type="button" value="entrar"></p>
-                    <p><input type="button" value="Esqueci Senha"></p>
+                <form action="login.php" method="post" autocomplete="on">
+                    
+                    <div class="campo">
+                        <span class="material-symbols-outlined">person</span>
+                        <input type="email" name="1login" id="i1login" placeholder="Seu e-mail" autocomplete="email" required maxlength="30">
+                        <label for="i1login">Login</label>
+                    </div>
+
+                    <div class="campo">
+                        <span class="material-symbols-outlined">vpn_key</span>
+                        <input type="password" name="2senha" id="i2senha" placeholder="Senha" autocomplete="current-password" required minlength="8" maxlength="20">
+                        <label for="i2senha">Senha</label>
+                    </div>
+                    
+                    <input type="submit" value="Entrar">
+                    <a href="esqueci.html" class="botao">Esqueci a Senha <span class="material-symbols-outlined">mail</span></a>
                 </form>
             </div>
         </section>
